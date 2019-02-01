@@ -10,7 +10,7 @@ import java.util.List;
  * @param nbChiffre de la combinaison à trouver
  * @param essaiCombinaison
  */
-public class Combinaison {
+public class tourDeJeu {
     private int nbChiffre;
 
     public Combinaison(int nbChiffre) {
