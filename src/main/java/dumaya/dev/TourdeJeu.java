@@ -10,10 +10,10 @@ import java.util.List;
  * @param nbChiffre de la combinaison à trouver
  * @param essaiCombinaison
  */
-public class tourDeJeu {
+public class TourdeJeu {
     private int nbChiffre;
 
-    public Combinaison(int nbChiffre) {
+    public TourdeJeu(int nbChiffre) {
         this.nbChiffre = nbChiffre;
     }
 
@@ -36,8 +36,7 @@ public class tourDeJeu {
         int nb=0;
         for(int i=0;i<nbChiffre;i++) {
             System.out.println("Saisie " + (i+1) );
-            nb = sc.next("\\d{1,3}\\");
-            essaiCombinaison.add(nb);
+                        essaiCombinaison.add(nb);
         }
     }
 
