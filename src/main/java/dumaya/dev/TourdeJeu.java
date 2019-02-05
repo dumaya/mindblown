@@ -2,8 +2,7 @@ package dumaya.dev;
 
 import java.util.Scanner;
 
-import java.util.ArrayList;
-import java.util.List;
+import static dumaya.dev.Partie.longueurduSecret;
 
 /**
  * Une série de x chiffres/couleurs
@@ -15,31 +14,24 @@ public abstract class TourdeJeu {
     /**
      * Saisir une combinaison de n chiffres
      */
-    public void saisirCombinaison(){
-        System.out.println("Saisie combinaison de " + nbChiffre + " chiffres");
-                Scanner sc = new Scanner(System.in);
-        int nb=0;
-        for(int i=0;i<nbChiffre;i++) {
-            System.out.println("Saisie " + (i+1) );
-                        essaiCombinaison.add(nb);
-        }
+    public String saisirCombinaison() {
+        System.out.println("Saisie combinaison de " + longueurduSecret + " chiffres");
+        Scanner sc = new Scanner(System.in);
+        String essaiCombinaison = sc.next();
+        return essaiCombinaison;
     }
 
     /**
-     * Afficher la combinaison
+     * Afficher le résultat
      */
-    public void afficherCombinaison(){
-        for(int i=0;i<nbChiffre;i++) {
-            System.out.println(essaiCombinaison.toArray());
-        }
+
+    public void afficherResultat(String texte) {
+        System.out.println(texte);
     }
 
-    public void afficherResultat() {
+    public abstract String comparaisonCombinaison(String tentative, String secret);
 
-    }
-
-    public abstract void comparaisonCombinaison();
-    public abstract void preparationResultat();
-
-
+    public abstract String preparationResultat(String resultat);
 }
+
+
