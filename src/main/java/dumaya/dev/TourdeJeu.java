@@ -10,22 +10,7 @@ import java.util.List;
  * @param nbChiffre de la combinaison à trouver
  * @param essaiCombinaison
  */
-public class TourdeJeu {
-    private int nbChiffre;
-
-    public TourdeJeu(int nbChiffre) {
-        this.nbChiffre = nbChiffre;
-    }
-
-    private List<Integer> essaiCombinaison = new ArrayList<Integer>();
-
-    public List<Integer> getEssaiCombinaison() {
-        return essaiCombinaison;
-    }
-
-    public void setEssaiCombinaison(List<Integer> essaiCombinaison) {
-        this.essaiCombinaison = essaiCombinaison;
-    }
+public abstract class TourdeJeu {
 
     /**
      * Saisir une combinaison de n chiffres
@@ -48,4 +33,13 @@ public class TourdeJeu {
             System.out.println(essaiCombinaison.toArray());
         }
     }
+
+    public void afficherResultat() {
+
+    }
+
+    public abstract void comparaisonCombinaison();
+    public abstract void preparationResultat();
+
+
 }
