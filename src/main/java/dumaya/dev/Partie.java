@@ -39,10 +39,13 @@ public class Partie {
         switch (choixModeJeu) {
             case "C":
                 jeu.jeuChallenger();
+                break;
             case "U":
                 jeu.jeuDuel();
+                break;
             case "D":
                 jeu.jeuDefenseur();
+                break;
             default :
                 break;
         }

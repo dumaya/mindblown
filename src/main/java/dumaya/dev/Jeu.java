@@ -16,7 +16,7 @@ public class Jeu {
         System.out.println("Le secret est :"+secret);
         int nbtour=0;
 
-        while (nbtour >= nbessaiPossible || gagné ){
+        do {
             if (choixJeu.equals("R")) {
                 TourdeRecherchePlusMoins tourdeJeuR = new TourdeRecherchePlusMoins();
                 String tentative = tourdeJeuR.saisirCombinaison();
@@ -31,7 +31,7 @@ public class Jeu {
                 tourdeJeuM.saisirCombinaison();
             }
             nbtour++;
-        }
+        } while (nbtour <= nbessaiPossible || gagné );
     return gagné;
     }
 

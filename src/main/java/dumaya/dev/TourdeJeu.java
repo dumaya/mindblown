@@ -6,8 +6,7 @@ import static dumaya.dev.Partie.longueurduSecret;
 
 /**
  * Une série de x chiffres/couleurs
- * @param nbChiffre de la combinaison à trouver
- * @param essaiCombinaison
+
  */
 public abstract class TourdeJeu {
 

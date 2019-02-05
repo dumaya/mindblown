@@ -9,7 +9,7 @@ public class TourdeMastermind extends TourdeJeu {
 
     @Override
     public String preparationResultat(String resultat) {
-        String texte = ("Ce n'est pas exact, try again -------->" + resultat);
+        String texte = (resultat + "<------ Ce n'est pas exact, try again" );
         return texte;
     }
 }
