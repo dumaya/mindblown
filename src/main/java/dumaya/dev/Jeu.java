@@ -5,7 +5,7 @@ import static dumaya.dev.Partie.*;
 public class Jeu {
 
     public boolean jeuChallenger() {
-        boolean gagné=false;
+        boolean gagne=false;
         String secret="0000";
         if (modeDev) {
             secret = this.definirCombinaisonSecrete("J");
@@ -21,7 +21,7 @@ public class Jeu {
                 TourdeRecherchePlusMoins tourdeJeuR = new TourdeRecherchePlusMoins();
                 String tentative = tourdeJeuR.saisirCombinaison();
                 if (tourdeJeuR.comparaisonCombinaison(tentative, secret).equals("====")) {
-                    gagné = true;
+                    gagne = true;
                 } else {
                     tourdeJeuR.afficherResultat(tourdeJeuR.preparationResultat(tourdeJeuR.comparaisonCombinaison(tentative,secret)));
                 }
@@ -31,8 +31,8 @@ public class Jeu {
                 tourdeJeuM.saisirCombinaison();
             }
             nbtour++;
-        } while (nbtour <= nbessaiPossible || gagné );
-    return gagné;
+        } while ((nbtour <= nbessaiPossible) && !gagne);
+    return gagne;
     }
 
     private String definirCombinaisonSecrete(String typejoueur) {

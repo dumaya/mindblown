@@ -2,15 +2,13 @@ package dumaya.dev;
 
 import java.util.Scanner;
 
+/**
+ * Une partie de jeu, avec enchainements de plusieurs jeux.
+ */
 public class Partie {
     public static String choixJeu;
     private String choixModeJeu;
     public static boolean modeDev;
-    public boolean isModeDev() {
-        return modeDev;
-    }
-
-
     public static int nbdeCouleur;
     public static int nbessaiPossible;
     public static int longueurduSecret;
@@ -21,6 +19,7 @@ public class Partie {
         choixJeu = sc.next();
         System.out.println("Choisissez le mode de jeu auquel vous voulez jouer : C pour Challenger, U pour Duel ou D pour Defense");
         choixModeJeu = sc.next();
+        System.out.println("C'est parti pour : Jeu : " + choixJeu + " Mode : " + choixModeJeu);
     }
 
     public void initLog() {
@@ -34,7 +33,6 @@ public class Partie {
     }
 
     public void lancerJeu() {
-        System.out.println("C'est parti pour : Jeu :" + choixJeu + " Mode : " + choixModeJeu);
         Jeu jeu = new Jeu();
         switch (choixModeJeu) {
             case "C":
