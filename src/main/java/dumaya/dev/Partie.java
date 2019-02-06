@@ -7,6 +7,11 @@ import java.util.Scanner;
  */
 public class Partie {
     public static String choixJeu;
+
+    public void setChoixModeJeu(String choixModeJeu) {
+        this.choixModeJeu = choixModeJeu;
+    }
+
     private String choixModeJeu;
     public static boolean modeDev;
     public static int nbdeCouleur;

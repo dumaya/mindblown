@@ -5,6 +5,7 @@ import static dumaya.dev.Partie.*;
 public class Jeu {
 
     public boolean jeuChallenger() {
+        System.out.println("Lancement du jeu en mode Challenger");
         boolean gagne=false;
         String secret="0000";
         if (modeDev) {
@@ -46,8 +47,10 @@ public class Jeu {
     }
 
     public void jeuDuel() {
+        System.out.println("Lancement du jeu en mode Duel");
     }
 
     public void jeuDefenseur() {
+        System.out.println("Lancement du jeu en mode Defenseur");
     }
 }
